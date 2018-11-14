@@ -1,0 +1,195 @@
+<app-header></app-header>
+<div id="flex-main">
+  <app-menu></app-menu>
+
+  <main id="layout">
+
+    <div style="width: 100%">
+      <div style="height:8vh">
+        <h1 id="TitrePage">Création d'un cabinet</h1>
+      </div>
+
+      <form id="creationCabinet" class="container" (ngSubmit)="creerCabinet()" #f="ngForm">
+
+        <div class="col">
+          <div class="col-lg-10" style="height: 95%">
+            <h4 style="margin-top:20px">Logo:</h4>
+            <div class="text-center flexCenter" style="background: #057cc6; height: 15%; color:white">
+              <img [src]="logo" class="img-fluid" style="max-height: 100%">
+            </div>
+            <input style="display: none" type="file" (change)="onSelectLogo($event)" #fileInput>
+            <button type="button" class="btn btn-outline-primary col" (click)="fileInput.click()">Choisir un logo</button>
+
+            <h4 class="margeT">Photo slider:</h4>
+            <div class="text-center flexCenter" style="background: #1a1a1a; height: 18%; color:white">
+              <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false">
+                <ul class="carousel-inner car1">
+                  <li class="carousel-item active">
+                    <img class="d-block w-100" src="/src/assets/img/voidImg2.png">
+                  </li>
+                  <li class="carousel-item" *ngFor="let url of photo_slider; index as i;">
+                    <img class="d-block w-100" [src]="url">
+                  </li>
+                </ul>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div><input style="display: none" type="file" (change)="onAddPhoto($event)" #fileInput2>
+            <button type="button" class="btn btn-outline-primary col-lg-12" title="Ajouter une photo" (click)="fileInput2.click()">Ajouter</button>
+
+            <h4 class="margeT">Praticiens:</h4>
+            <div class="row">
+             <!-- <input type="text" class="form-control col-lg-9" name="searchPraticien" id="searchPraticien"> -->
+              <button type="button" class="btn btn-outline-primary col-lg-6" title="Lier des praticiens" data-toggle="modal"
+                data-target="#modalPraticiens">Lier</button>
+                <button type="button" class="btn btn-outline-danger col-lg-6" title="Vider la liste" (click)="voidPraticiens()">Vider</button>
+                <div id="praticiensLinked" class="modal-body col col-lg-12" style="margin-top:10px; padding: 10px">
+                    <div class="prat" *ngFor="let praticien of praticiens_linked; index as j;">
+                      <img [src]="praticien.photo_praticien" class="vignettePrat">
+                      <span>{{ praticien.nom_praticien}}</span><br>
+                    </div>
+                  </div>
+
+              <!-- Modal -->
+              <div class="modal fade" id="modalPraticiens" tabindex="-1" role="dialog" aria-labelledby="modalPraticiensTitle"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="modalPraticiensTitle">Modal title</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div id="listePraticiens" class="modal-body col col-lg-12" style="margin-top:10px; padding: 10px">
+                      <div class="prat" *ngFor="let praticien of liste_praticiens; index as j;">
+                        <img [src]="praticien.photo_praticien" class="vignettePrat">
+                        <span>{{ praticien.nom_praticien}}</span>
+                        <button type="button" class="btn btn-outline-primary" title="Ajouter" style="width: 38px; height: 38px"
+                          (click)="ajouterPraticien(praticien.id_praticien)"><i class="fas fa-plus"></i></button><br>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="row" style="margin-top: 30px">
+            <label for="NomCabinet" class="col">Nom du cabinet: </label>
+            <input type="text" name="NomCabinet" class="form-control col-lg-8 backorange" [(ngModel)]="nom_cabinet">
+            <span class="col-lg-1"></span>
+          </div>
+
+          <div class="row margeT">
+            <label for="CodeCabinet" class="col-lg-3">Code login: </label>
+            <input type="text" name="CodeCabinet" id="codeCabinet" class="form-control col-lg-5" [(ngModel)]="code_cabinet"
+              required minlength="5" maxlength="5">
+            <span class="col-lg-1" style="padding: 0%;"></span>
+            <span class="col-lg-3" style="padding: 0%;"> <button type="button" class="btn btn-primary invert-color"
+                title="Générer un code" (click)="onGenererCode();">Générer</button>
+            </span>
+          </div>
+
+          <div class="row margeT">
+            <label class="col-lg-3">Descriptif:</label>
+            <textarea rows="3" class="form-control col-lg-8 backorange" [(ngModel)]="description_cabinet"
+              [ngModelOptions]="{standalone: true}"></textarea>
+            <span class="col-lg-1"></span>
+          </div>
+
+          <div class="row margeT">
+            <label class="col-lg-3">Adresse: </label>
+            <textarea rows="2" class="form-control col-lg-5 backorange" placeholder="Rue, numéro, etc..." [(ngModel)]="adresse"
+              [ngModelOptions]="{standalone: true}"></textarea>
+            <span class="row col-lg-4">
+              <input type="text" name="CodePostal" class="form-control col-lg-10 backorange" placeholder="Code Postal"
+                [(ngModel)]="code_postal">
+              <input type="text" name="Ville" class="form-control col-lg-10 backorange" placeholder="Ville" [(ngModel)]="ville">
+            </span>
+          </div>
+
+          <div class="row margeT">
+            <label class="col-lg-3">Horaire: </label>
+
+            <span class="row col-lg-8">
+              <input type="text" name="CodePostal" class="form-control col-lg-6 backorange" placeholder="Lundi"
+                [(ngModel)]="horaire_cabinet[0]">
+              <input type="text" name="CodePostal" class="form-control col-lg-6 backorange" placeholder="Mardi"
+                [(ngModel)]="horaire_cabinet[1]">
+              <input type="text" name="CodePostal" class="form-control col-lg-6 backorange" placeholder="Mercredi"
+                [(ngModel)]="horaire_cabinet[2]">
+              <input type="text" name="CodePostal" class="form-control col-lg-6 backorange" placeholder="Jeudi"
+                [(ngModel)]="horaire_cabinet[3]">
+              <input type="text" name="CodePostal" class="form-control col-lg-6 backorange" placeholder="Vendredi"
+                [(ngModel)]="horaire_cabinet[4]">
+              <input type="text" name="CodePostal" class="form-control col-lg-6 backorange" placeholder="Samedi"
+                [(ngModel)]="horaire_cabinet[5]">
+            </span>
+          </div>
+
+          <div class="row margeT">
+            <label class="col-lg-3">Contact: </label>
+            <input type="tel" name="tel" class="form-control col-lg-6 backorange" placeholder="Téléphone" [(ngModel)]="telephone">
+            <span class="col-lg-3"></span>
+            <span class="col-lg-3"></span>
+            <input type="email" name="mail" class="form-control col-lg-6 backorange margeT" placeholder="Adresse mail"
+              [(ngModel)]="mail">
+            <span class="col-lg-3 margeT"></span>
+            <span class="col-lg-3"></span>
+            <input type="text" name="website" class="form-control col-lg-6 backorange margeT" placeholder="Site web"
+              [(ngModel)]="site_web">
+            <span class="col-lg-3"></span>
+          </div>
+        </div>
+
+        <div id="renduCabinet" class="col col-lg-3">
+          <div id="imageRenduCabinet" class="text-center flexCenter">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+              <ul class="carousel-inner car2">
+                <li class="carousel-item active">
+                  <img class="d-block w-100" src="/src/assets/img/voidImg2.png">
+                </li>
+                <li class="carousel-item" *ngFor="let url of photo_slider; index as i;">
+                  <img class="d-block w-100" [src]="url">
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div id="renduCabinetContent">
+            <p>Nom du cabinet: <span>{{ nom_cabinet }}</span> <br>
+              <span>Code login: </span><span>{{ code_cabinet }}</span> <br>
+              <span>Descriptif: </span><span>{{ description_cabinet }}</span> </p>
+            <p>Adresse: <span>{{ adresse }} <br>
+                Code postal: {{ code_postal }} <br> Ville: {{ ville }}</span> </p>
+            <p>
+              Horaire: <br>
+              <span class="col-lg-6">Lun: {{ horaire_cabinet[0] }} </span> <span class="col-lg-6">Mar: {{
+                horaire_cabinet[1] }}</span> <br>
+              <span class="col-lg-6">Mer: {{ horaire_cabinet[2] }}</span> <span class="col-lg-6">Jeu: {{
+                horaire_cabinet[3] }}</span> <br>
+              <span class="col-lg-6">Ven: {{ horaire_cabinet[4] }}</span> <span class="col-lg-6">Sam: {{
+                horaire_cabinet[5] }}</span>
+            </p>
+            <p><span>Téléphone: {{ telephone }}<br>
+                Email: {{ mail }}<br>
+                Site web: {{ site_web }}
+              </span> </p>
+          </div>
+        </div>
+        <button type="submit" href="#" id="boutonValider" class="btn btn-primary" [disabled]="f.invalid">Valider</button>
+
+      </form>
+    </div>
+
+  </main>
+</div>

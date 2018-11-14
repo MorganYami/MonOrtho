@@ -1,0 +1,118 @@
+<app-header></app-header>
+<div id="flex-main">
+<app-menu></app-menu>
+
+<main id="layout">
+
+  <div style="width: 100%">
+
+    <div style="height:8vh">
+      <h1 id="TitrePage">Création d'un praticien</h1>
+    </div>
+
+    <div id="creationPraticien">
+
+      <div style="width: 25%">
+        <div id="creationPraticienRendu">
+          <div style="padding:10px;">
+            <img [src]="photo" id="imgPraticien">
+          </div>
+
+          <div id="RenduPraticienContent">
+            <div class="row" style="margin:10px 0% 0% 0%">
+              <p class="col-lg-5"><strong>Nom:</strong><br>
+                {{ nom }}</p>
+              <p class="col-lg-5"><strong>Prenom:</strong><br>
+                {{ prenom }}</p>
+            </div>
+            <p><strong>Genre:</strong><br>
+              {{ sexe }}</p>
+            <p><strong>Diplomes:</strong><br>
+              {{ diplome }}</p>
+              <p><strong>Titre:</strong><br>
+                {{ titre }}</p>
+            <p><strong>Spécialité:</strong><br>
+              {{ specialite }}</p>
+            <p><strong>Description:</strong><br>
+              {{ description }}</p>
+          </div>
+        </div>
+      </div>
+
+      <form style="width: 75%;" (ngSubmit)="creerPraticien()" #f="ngForm">
+
+        <div id="creationPraticienForm">
+
+          <div class="flex-row" style="height:95%;margin-left: 10px;">
+            <div class="column" style="height:100%;width:65%">
+
+              <div>
+                <h3>Identité:</h3>
+                <div class="column">
+                  <label for="NomPraticien" class="margeT">Nom: </label>
+                  <input type="text" name="NomPraticien" class="form-control" [(ngModel)]="nom" minlength="1" required>
+                  <label for="PrenomPraticien" class="margeT">Prenom: </label>
+                  <input type="text" name="PrenomPraticien" class="form-control" [(ngModel)]="prenom" minlength="1"
+                    required>
+                  <label class="margeT">Genre: </label>
+                  <div style="margin-left:20%;">
+                    <div class="form-check form-check-inline">
+                      <label class="form-check-label" for="inlineRadio1">Masculin:</label>
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Masculin"
+                        [(ngModel)]="sexe">
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <label class="form-check-label" for="inlineRadio2">Féminin:</label>
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Feminin"
+                        [(ngModel)]="sexe">
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <label class="form-check-label" for="inlineRadio3">Autre:</label>
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="Autre"
+                        [(ngModel)]="sexe">
+                    </div>
+                  </div>
+                  <label for="Diplome" class="margeT">Diplôme: </label>
+                  <input type="text" name="Diplome" class="form-control" [(ngModel)]="diplome">
+                  <label for="Titre" class="margeT">Titre: </label>
+                  <input type="text" name="Titre" class="form-control" [(ngModel)]="titre">
+                </div>
+              </div>
+
+              <div>
+                <h3>Spécialité:</h3>
+                <div class="input-group mb-3">
+                  <select class="custom-select" id="inputGroupSelect01" [(ngModel)]="specialite" [ngModelOptions]="{standalone: true}">
+                    <option value="Praticien" selected>Praticien</option>
+                    <option value="Assistant">Assistant</option>
+                    <option value="Secrétaire">Secrétaire</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <h3>Description:</h3>
+                <textarea rows="4" cols="50" class="form-control" [(ngModel)]="description" [ngModelOptions]="{standalone: true}"></textarea>
+              </div>
+            </div>
+
+            <div style="width:250px;height:100%;margin-right:10px;">
+              <h3>Photo de profil</h3>
+              <div id="photoProfilPraticien">
+                <img [src]="photo" class="img-fluid">
+              </div>
+
+              <input style="display: none" type="file" (change)="onSelectPhotoPraticien($event)" #fileInput>
+              <button type="button" class="btn btn-outline-primary col" (click)="fileInput.click()">Choisir une
+                photo</button>
+
+            </div>
+          </div>
+          <button type="submit" id="boutonValider" class="btn btn-primary" [disabled]="f.invalid">Valider</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</main>
+</div>

@@ -1,0 +1,31 @@
+
+<app-header></app-header>
+<app-menu></app-menu>
+
+<main>
+    <div class="container">
+        <div class="text-center">
+
+                <!-- items being paged  -->
+                <section class="row">
+                    <article class="col-lg-4" *ngFor="let item of allItems | paginate : { itemsPerPage: 3, currentPage: p }">
+                            <div class="card" style="width: 14rem;">
+                                <img class="card-img-top" src="assets/img/cabinet.jpg" alt="photo cabinet">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{item.nom_cabinet | uppercase}}</h5>
+                                    <p class="card-text"></p>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">{{item.description_cabinet}}</li>
+                                    <li class="list-group-item">{{item.adresse}}</li>
+                                </ul>
+                            </div>
+                            <br><br>
+                    </article>
+            </section>
+
+
+            <pagination-controls (pageChange)="p =$event"></pagination-controls>
+        </div>
+    </div>
+</main>

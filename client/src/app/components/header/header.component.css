@@ -1,0 +1,32 @@
+.mainhead {
+    height: 6vh;
+    width: 100%;
+    background-color: black;
+    z-index: 200;
+}
+
+article {
+    width: 40%;
+}
+
+.logo {
+    height: 6vh;
+    width: auto;
+    padding-left: 60px;
+}
+
+.identite {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.identification {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+

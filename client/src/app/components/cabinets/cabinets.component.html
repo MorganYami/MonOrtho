@@ -1,0 +1,66 @@
+<app-header></app-header>
+<div id="flex-main">
+<app-menu></app-menu>
+
+<main>
+  <div class="bloc_page">
+      <div style="height:8vh">
+          <h1 id="TitrePage">Rechercher un cabinet</h1>
+        </div>
+
+    <section>
+      <div id="gauche">
+        <div id="vert-g">
+          <div id="gauche-haut" class="vz" (clic)="Cnoms();">
+            <span id="text01">Nom</span>
+            <img id="icone1" src="../../../assets/img/a.png" alt="cabinets" />
+          </div>
+          <div id="gauche-bas" class="vz" (click)="Cvilles();">
+            <span id="text02">Villes</span>
+            <img id="icone3" src="../../../assets/img/city.png" alt="villes">
+          </div>
+        </div>
+        <div id="vert-d">
+          <div id="droit-haut-droit" class="vz" (click)="Cpraticien();">
+            <span id="text03">Praticiens</span>
+            <img id="icone2" src="../../../assets/img/praticien.png" alt="praticiens">
+          </div>
+          <div id="droit-bas-droit" class="vz" (click)="Cdates();">
+            <span id="text04">Dates</span>
+            <img id="icone4" src="../../../assets/img/calendar.png" alt="dates">
+          </div>
+        </div>
+      </div>
+      <div id="droite">
+        <div id="droit-haut">
+          <input type="text" id="chercher" value='{{ Rech }}' name="cherche" placeholder="Recherches" />
+          <a routerLink="/rechercher-cabinet"><img id="icone5" src="../../../assets/img/search.png" alt="cabinets"></a>
+        </div>
+        <div id="droit-bas">
+          <div id="affiche_cabinet">
+            <ul class="list-group list-group-flush">
+              <li>
+
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>
+        <img id="icone6" src="../../../assets/img/hospital-bleu.png" alt="cabinets">
+        <span id="text1">
+          {{ taille }}
+          Cabinets enregistrés </span>
+      </div>
+      <div>
+        <img id="icone7" src="../../../assets/img/praticien-bleu.png" alt="cabinets">
+        <span id="text2">
+          Praticien enregistrés</span>
+      </div>
+    </footer>
+  </div>
+</main>
+</div>

@@ -1,0 +1,26 @@
+[
+    {
+        "id_praticien": 1,
+        "nom_praticien": "Dentdure",
+        "prenom_praticien": "Phillip",
+        "photo_praticien": "http://localhost:3000/assets/img/praticiens/phillpDentdure.jpg",
+        "sexe": "Masculin",
+        "diplome": "Doctorat en prothèse dentaire",
+        "descritpion_praticien": "Aenean semper purus turpis, eu aliquet arcu tempor ac. Ut leo nulla, suscipit et lorem eget, fringilla venenatis dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        "titre": "Docteur",
+        "specialite": "Praticien",
+        "date_creation_praticien": "2018-10-25 15:57:26"
+    },
+    {
+        "id_praticien": 2,
+        "nom_praticien": "Fallon",
+        "prenom_praticien": "Naura",
+        "photo_praticien": "http://localhost:3000/assets/img/praticiens/identite.jpg",
+        "sexe": "Feminin",
+        "diplome": "Master en taxidermie",
+        "descritpion_praticien": "Aenean semper purus turpis, eu aliquet arcu tempor ac. Ut leo nulla, suscipit et lorem eget, fringilla venenatis dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        "titre": "Madame",
+        "specialite": "Praticien",
+        "date_creation_praticien": "2018-10-25 16:23:16"
+    }
+]

@@ -1,0 +1,140 @@
+header {
+	background: #000000;
+	height:8vh;
+	
+}
+section {
+	background: rgb(248, 248, 248);
+	display: flex;
+	flex-direction: column;
+    height: 92%;
+    width: 100%;
+    z-index: 2;
+}
+
+#flex-main{
+    width: 100%;
+    height: 94vh;;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+#TitrePage{
+    padding: 10px;
+    text-align: center;
+    color: white;
+    background-color: rgb(0, 36, 53);
+    margin: 0%;
+    height: 100%;
+}
+#barreRecherche{
+    height: 8vh;
+    width: 100%;
+    margin: 0px;
+    padding-right: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#chercher{
+    margin-left:10px;
+}
+#btnRecherche{
+    margin-left: 10px;
+}
+#icone5 {
+    width: 4vh;
+    height:4vh;
+}
+#rendu{
+    height: 64vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding:10px 0px 0px 0px;
+}
+#pgt{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#navAlpha{
+    color:black;
+    font-size: 0.8em;
+    z-index: 1;
+}
+
+.bloc_page {
+	display: flex; /* or inline-flex */
+	flex-direction: column ;
+	height:94vh;
+	background: #5FE5FF;
+}
+.selecteurs{
+    padding: 5px;
+    height: 100%;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.selecteurs:hover{
+    border: 1px solid white;
+    cursor: pointer;
+}
+.selected{
+    border: 2px solid rgb(255, 255, 255);
+    width: 20%;
+}
+.cBleu{
+    background: #057CC6;
+}
+.cCien{
+    background: #57CCC6;
+}
+.cGris{
+    background: #435F71;
+}
+.cOrange{
+    background: #F2845C;
+}
+.icone{
+    width: 4vh;
+}
+.icone2{
+    width:5vh;
+}
+.resultat{
+    max-height: 60vh;
+    max-width: 280px;
+    border: 1px solid black;
+    padding: 5px;
+    margin: 0px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.imgResultat{
+    max-height: 25vh;
+    max-width: 25vw;
+    padding: 0%;
+}
+.titreResultat{
+    height: 5vh;
+    margin: 0%;
+    font-size: 1.2em;
+    padding: 10px 0%;
+}
+.textResultat{
+    max-height: 25vh;
+    max-width: 98%;
+    margin: 0%;
+    padding: 5px 0%;
+    overflow-y: auto;
+}

@@ -1,0 +1,40 @@
+header {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: white;
+}
+    img {
+        height: 25vh;
+        margin: 0;
+    }
+main {
+    margin: 0;
+    padding: 0;
+    height: 70vh;
+    width: 100%;
+    background: #FF7000;
+}
+    form {
+        padding: 10vh;
+        position: relative;
+    }
+    .wrong {
+        animation-name: wrongAnimation;
+        animation-duration: 0.1s;
+    }
+footer {
+    height: 5vh;
+    background: #FF7000;
+}
+    footer a{
+        color: white;
+    }
+    footer p{
+        margin: 0;
+    }
+
+@keyframes wrongAnimation {
+    from {left: 25px;}
+    to {left: -25px;}
+}

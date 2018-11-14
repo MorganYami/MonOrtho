@@ -1,0 +1,78 @@
+<app-header></app-header>
+<div id="flex-main">
+<app-menu></app-menu>
+
+<main>
+  <div class="bloc_page">
+      <div style="height:8vh">
+          <h1 id="TitrePage">Rechercher un praticien</h1>
+        </div>
+
+    <section>
+      <div id="gauche">
+        <div id="vert-g">
+          <div id="gauche-haut" class="vz" (clic)="Cnoms();">
+            <span id="text01">Nom</span>
+            <img id="icone1" class="img-fluid" src="../../../assets/img/a.png" alt="cnom" />
+          </div>
+          <div id="gauche-bas" (click)="Ccabinets();" class="vz">
+            <span id="text02">Villes</span>
+            <img id="icone3" src="../../../assets/img/city.png" alt="villes">
+          </div>
+        </div>
+        <div id="vert-d">
+          <div id="droit-haut-droit" (click)="Cvilles();" class="vz">
+            <span id="text03">Cabinets</span>
+            <img id="icone2" src="../../../assets/img/cabinets.png" alt="praticiens">
+          </div>
+          <div id="droit-bas-droit" (click)="Cdates();" class="vz">
+            <span id="text04">Dates</span>
+            <img id="icone4" src="../../../assets/img/calendar.png" alt="dates">
+          </div>
+        </div>
+      </div>
+      <div id="droite">
+        <div id="droit-haut">
+          <input type="text" id="chercher" value='{{ Rech }}' name="cherche" placeholder="Recherches" />
+          <a routerLink="/rechercher-praticien"><img id="icone5" src="../../../assets/img/search.png" alt="praticiens"></a>
+        </div>
+        <div id="droit-bas">
+          <div id="affiche_cabinet">
+            <ul *ngIf="nom" class="list-group list-group-flush">
+
+              <li *ngFor="let cabinet of cabinets" id="list1" class="list-group-item">Nom Cabinet
+                :{{cabinet.nom_cabinet}} </li>
+            </ul>
+            <ul *ngIf="praticien" class="list-group list-group-flush">
+
+              <li *ngFor="let praticien of praticiens" id="list1" class="list-group-item">Nom Praticien :
+                {{praticien.nom_praticien}}</li>
+            </ul>
+            <ul *ngIf="villes" class="list-group list-group-flush">
+              <li *ngFor="let contact of contacts" id="list1" class="list-group-item">Ville : {{contact.ville}} : </li>
+            </ul>
+            <ul *ngIf="dates" class="list-group list-group-flush">
+              <li *ngFor="let cabinet of cabinets" id="list1" class="list-group-item">{{cabinet.date_creation_cabinet}}
+                : </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>
+        <img id="icone6" src="../../../assets/img/hospital-bleu.png" alt="cabinets">
+        <span id="text1">
+          {{ taille }}
+          Cabinets enregistrés </span>
+      </div>
+      <div>
+        <img id="icone7" src="../../../assets/img/praticien-bleu.png" alt="cabinets">
+        <span id="text2">
+          Praticien enregistrés</span>
+      </div>
+    </footer>
+  </div>
+</main>
+</div>

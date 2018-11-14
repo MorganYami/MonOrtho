@@ -1,0 +1,122 @@
+<app-header></app-header>
+<div id="flex-main">
+  <app-menu></app-menu>
+
+  <main>
+    <div class="bloc_page">
+      <div style="height:8vh">
+        <h1 id="TitrePage">Rechercher un praticien en fonction de la ville</h1>
+      </div>
+
+      <section>
+        <div id="barreRecherche">
+          <div class="selecteurs cBleu">
+            <img class="icone" src="../../../assets/img/a.png" alt="noms">
+          </div>
+          <div class="selecteurs cCien selected">
+            <img class="icone2" src="../../../assets/img/city.png" alt="villes" style="margin-top: 1vh">
+          </div>
+          <div class="selecteurs cGris">
+            <img class="icone" src="../../../assets/img/cabinets.png" alt="cabinets">
+          </div>
+          <div class="selecteurs cOrange">
+            <img class="icone" src="../../../assets/img/calendar.png" alt="dates">
+          </div>
+          <input type="text" class="form-control col-lg-3" id="chercher" value='{{ Rech }}' name="cherche" placeholder="Recherches" />
+          <button id="btnRecherche" type="button" class="btn btn-light"> <img id="icone5" src="../../../assets/img/search2.png"
+              alt="praticiens"></button>
+        </div>
+
+        <div id="navAlpha">
+          <nav aria-label="Page navigation example" style="margin-top:1vh">
+            <ul class="pagination justify-content-center" style="margin:0%; flex-wrap:wrap">
+              <li class="page-item"><a class="page-link" href="#">A</a></li>
+              <li class="page-item"><a class="page-link" href="#">B</a></li>
+              <li class="page-item"><a class="page-link" href="#">C</a></li>
+              <li class="page-item"><a class="page-link" href="#">D</a></li>
+              <li class="page-item"><a class="page-link" href="#">E</a></li>
+              <li class="page-item"><a class="page-link" href="#">F</a></li>
+              <li class="page-item"><a class="page-link" href="#">G</a></li>
+              <li class="page-item"><a class="page-link" href="#">H</a></li>
+              <li class="page-item"><a class="page-link" href="#">I</a></li>
+              <li class="page-item"><a class="page-link" href="#">J</a></li>
+              <li class="page-item"><a class="page-link" href="#">K</a></li>
+              <li class="page-item"><a class="page-link" href="#">L</a></li>
+              <li class="page-item"><a class="page-link" href="#">M</a></li>
+              <li class="page-item"><a class="page-link" href="#">N</a></li>
+              <li class="page-item"><a class="page-link" href="#">O</a></li>
+              <li class="page-item"><a class="page-link" href="#">P</a></li>
+              <li class="page-item"><a class="page-link" href="#">Q</a></li>
+              <li class="page-item"><a class="page-link" href="#">R</a></li>
+              <li class="page-item"><a class="page-link" href="#">S</a></li>
+              <li class="page-item"><a class="page-link" href="#">T</a></li>
+              <li class="page-item"><a class="page-link" href="#">U</a></li>
+              <li class="page-item"><a class="page-link" href="#">V</a></li>
+              <li class="page-item"><a class="page-link" href="#">W</a></li>
+              <li class="page-item"><a class="page-link" href="#">X</a></li>
+              <li class="page-item"><a class="page-link" href="#">Y</a></li>
+              <li class="page-item"><a class="page-link" href="#">Z</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div id="rendu">
+          <div class="resultat">
+            <img src="../../../assets/img/default-placeholder.png" class="imgResultat">
+            <p class="titreResultat">Nom du praticien</p>
+            <p class="textResultat">
+              Tempora sit adipisci officia laborum aliquam repudiandae magnam recusandae sequi excepturi.
+            </p>
+            <p class="textResultat">
+              64000 Pau
+            </p>
+          </div>
+          <div class="resultat">
+            <img src="../../../assets/img/default-placeholder.png" class="imgResultat">
+            <p class="titreResultat">Nom du praticien</p>
+            <p class="textResultat">
+              Tempora sit adipisci officia laborum aliquam repudiandae magnam recusandae sequi excepturi.
+            </p>
+            <p class="textResultat">
+              64000 Pau
+            </p>
+          </div>
+          <div class="resultat">
+            <img src="../../../assets/img/default-placeholder.png" class="imgResultat">
+            <p class="titreResultat">Nom du praticien</p>
+            <p class="textResultat">
+              Tempora sit adipisci officia laborum aliquam repudiandae magnam recusandae sequi excepturi.
+            </p>
+            <p class="textResultat">
+              64000 Pau
+            </p>
+          </div>
+        </div>
+
+        <div id="pgt">
+          <nav aria-label="Page navigation example">
+            <ul class="pagination" style="margin:0%">
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                  <span class="sr-only">Previous</span>
+                </a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+      </section>
+
+    </div>
+  </main>
+</div>

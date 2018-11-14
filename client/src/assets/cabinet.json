@@ -1,0 +1,147 @@
+[
+    {
+       "id_cabinet":1,
+       "nom_cabinet":"Cabinet des cinq cantons",
+       "description_cabinet":"Lorem 1",
+       "logo":"1",
+       "adresse":"12 rue de la dent",
+       "date_creation_cabinet":12,
+       "date_cloture":12
+    },
+    {
+       "id_cabinet":2,
+       "nom_cabinet":"Cabinet du pic du midi d'Ossau",
+       "description_cabinet":"Lorem 2",
+       "logo":"1",
+       "adresse":"24 rue Général de Gaulle",
+       "date_creation_cabinet":12,
+       "date_cloture":12
+    },
+    {
+       "id_cabinet":3,
+       "nom_cabinet":"Cabinet des six cantons",
+       "description_cabinet":"Lorem 3",
+       "logo":"1",
+       "adresse":"8 avenue mermoz",
+       "date_creation_cabinet":12,
+       "date_cloture":12
+    },
+    {
+       "id_cabinet":4,
+       "nom_cabinet":"Cabinet Gaston Phoebus",
+       "description_cabinet":"Lorem 4",
+       "logo":"1",
+       "adresse":"2 rue des oiseaux",
+       "date_creation_cabinet":12,
+       "date_cloture":12
+    },
+    {
+       "id_cabinet":3,
+       "nom_cabinet":"Cabinet des six cantons",
+       "description_cabinet":"Lorem 5",
+       "logo":"1",
+       "adresse":"8 avenue mermoz",
+       "date_creation_cabinet":12,
+       "date_cloture":12
+    },
+    {
+       "id_cabinet":4,
+       "nom_cabinet":"Cabinet Gaston Phoebus",
+       "description_cabinet":"Lorem 6",
+       "logo":"1",
+       "adresse":"2 rue des oiseaux",
+       "date_creation_cabinet":12,
+       "date_cloture":12
+    },
+    {
+       "id_cabinet":3,
+       "nom_cabinet":"Cabinet des six cantons",
+       "description_cabinet":"Lorem 7",
+       "logo":"1",
+       "adresse":"8 avenue mermoz",
+       "date_creation_cabinet":12,
+       "date_cloture":12
+    },
+    {
+       "id_cabinet":4,
+       "nom_cabinet":"Cabinet Gaston Phoebus",
+       "description_cabinet":"Lorem 8",
+       "logo":"1",
+       "adresse":"2 rue des oiseaux",
+       "date_creation_cabinet":12,
+       "date_cloture":12
+    },
+    {
+       "id_cabinet":3,
+       "nom_cabinet":"Cabinet des six cantons",
+       "description_cabinet":"Lorem 9",
+       "logo":"1",
+       "adresse":"8 avenue mermoz",
+       "date_creation_cabinet":12,
+       "date_cloture":12
+    },
+    {
+       "id_cabinet":4,
+       "nom_cabinet":"Cabinet Gaston Phoebus",
+       "description_cabinet":"Lorem 10",
+       "logo":"1",
+       "adresse":"2 rue des oiseaux",
+       "date_creation_cabinet":12,
+       "date_cloture":12
+    },
+    {
+       "id_cabinet":3,
+       "nom_cabinet":"Cabinet des six cantons",
+       "description_cabinet":"Lorem 11",
+       "logo":"1",
+       "adresse":"8 avenue mermoz",
+       "date_creation_cabinet":12,
+       "date_cloture":12
+    },
+    {
+       "id_cabinet":4,
+       "nom_cabinet":"Cabinet Gaston Phoebus",
+       "description_cabinet":"Lorem 12",
+       "logo":"1",
+       "adresse":"2 rue des oiseaux",
+       "date_creation_cabinet":12,
+       "date_cloture":12
+    },
+    {
+       "id_cabinet":3,
+       "nom_cabinet":"Cabinet des six cantons",
+       "description_cabinet":"Lorem 13",
+       "logo":"1",
+       "adresse":"8 avenue mermoz",
+       "date_creation_cabinet":12,
+       "date_cloture":12
+    },
+    {
+        "id_cabinet":4,
+        "nom_cabinet":"Cabinet Gaston Phoebus",
+        "description_cabinet":"Lorem 14",
+        "logo":"1",
+        "adresse":"2 rue des oiseaux",
+        "date_creation_cabinet":12,
+        "date_cloture":12
+     },
+     {
+        "id_cabinet":3,
+        "nom_cabinet":"Cabinet des six cantons",
+        "description_cabinet":"Lorem 15",
+        "logo":"1",
+        "adresse":"8 avenue mermoz",
+        "date_creation_cabinet":12,
+        "date_cloture":12
+     },
+    {
+       "id_cabinet":4,
+       "nom_cabinet":"Cabinet Gaston Phoebus",
+       "description_cabinet":"Lorem 16",
+       "logo":"1",
+       "adresse":"2 rue des oiseaux",
+       "date_creation_cabinet":12,
+       "date_cloture":12
+    }
+ ]
+ 

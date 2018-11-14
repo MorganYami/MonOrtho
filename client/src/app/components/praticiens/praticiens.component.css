@@ -1,0 +1,234 @@
+.bloc_page {
+	display: flex; /* or inline-flex */
+	flex-direction: column ;
+	height:94vh;
+	width:82vw;
+	background: #5FE5FF;
+}
+
+header {
+	background: #000000;
+	height:8vh;
+	
+}
+section {
+	background:#BDCAD6;
+	display: flex; 
+	flex-direction: row ;
+	height:80%;
+
+}
+footer {
+	background:#1a1a1a;
+	height:15vh;
+	color:#FFFFFF; 
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly
+}
+footer div{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: baseline;
+}
+footer #text1 {
+	color:rgb(221, 221, 221);
+}
+footer #text2 {
+	color:rgb(221, 221, 221);
+}
+
+#flex-main{
+    width: 100%;
+    height: 94vh;;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+#TitrePage{
+    padding: 10px;
+    text-align: center;
+    color: white;
+    background-color: rgb(0, 36, 53);
+    margin: 0%;
+    height: 100%;
+}
+
+.vz{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.vz:hover {
+	border: 1px solid white;
+}
+
+#gauche {	
+	background:#FFFF00;
+	display: flex; /* or inline-flex */
+	flex-direction: row ;
+	width:50vw;
+	height:100%;
+}
+
+#droite {
+	background:#9A8960;
+	height:100%;
+	width:50vw;
+	display: flex; /* or inline-flex */
+	flex-direction: column; 
+}
+
+/*gauche*/
+#vert-g {
+	display: flex; 
+	flex-direction: column ;
+	background: #3F7006;
+	height:100%;
+	width:30vw;
+	
+	
+}
+/*droite*/
+#vert-d {
+	display: flex; /* or inline-flex */
+	flex-direction: column ;
+	background: #3F7006;
+	height:100%;
+	width:30vw;
+	
+	
+}
+#gauche-haut {
+	background: #057CC6;
+	height:50vh;
+}
+#gauche-haut:hover{
+	background: rgb(7, 144, 230);
+}
+
+#gauche-bas {
+	background:#435F71;
+	height:50vh;	
+}
+#gauche-bas:hover{
+	background: rgb(91, 129, 153);
+}
+
+#droit-haut-droit {
+	background: #F2845C;
+	height:50vh;
+}
+#droit-haut-droit:hover{
+	background: rgb(255, 155, 118);
+}
+	
+#droit-bas-droit {
+	background: #57CCC6;
+	height:50vh;
+}
+#droit-bas-droit:hover{
+	background: rgb(108, 255, 248);
+}
+
+#vert-droit {
+	display: flex; /* or inline-flex */
+	flex-direction: column ;
+	background: #3F7006;
+	
+	height:85vh;
+	position: relative;
+}
+#droit-haut {
+	background: #435F71;
+	height:25vh;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+#droit-bas {
+	background: linear-gradient(rgba(5,124,198,0.5), rgba(5,124,198,0.5)),
+                  url("../../../assets/img/cabinetpano.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	height:65vh;
+}
+#cabinet{
+	position: absolute;
+	left: 10vw;
+	top:44vh;
+	color:#E4E3C8;
+}
+#affiche_cabinet {
+	position: absolute;
+	left: 10vw;
+	top:34vh;
+	width: 40vw ;
+	overflow: hidden;
+}
+.list-group-item{
+	background-color: transparent!important;
+	border: 0;
+	color: #E4E3C8;
+	font-size: 13px
+}
+
+#icone1 {
+	width: 96px ;
+}
+
+#icone2 {
+	width: 96px ;
+}
+
+#icone3 {
+	width: 98px ;
+}
+
+#icone4 {
+	width: 96px ;
+}
+
+#icone5 {		
+	width: 64px ;
+}
+#icone6 {
+	width: 40px ;
+}
+
+#icone7 {
+	width: 40px ;
+}
+#chercher {
+	background: rgba(255,255,255,0) ;
+	border: 0;	
+	font-size: 2rem;
+	width: 50%;
+}
+#chercher::placeholder{
+	color:white;
+}
+#text01{
+	color: rgb(255, 255, 255);
+	font-size:26px ;
+
+}
+#text02{
+	color: rgb(255, 255, 255);
+	font-size: 26px;
+
+}
+#text03{
+	color: rgb(255, 255, 255);
+	font-size:26px ;
+
+}
+#text04{
+	color: rgb(255, 255, 255);
+	font-size: 26px ;
+
+}

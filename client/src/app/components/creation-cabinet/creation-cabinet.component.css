@@ -46,10 +46,15 @@ button:disabled, button[disabled]{
     background: rgb(255, 255, 255);
 }
 
+#validateDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+    height: 30vh;
+}
 #boutonValider{
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
+    height: 42px;
     margin-top:10px;
     padding: 10px 50px 10px 50px;
     font-weight: bold;    
@@ -79,8 +84,8 @@ button:disabled, button[disabled]{
 }
 
 .backorange{
-    background-color: #ff885dfb;
-    color: white;
+    background-color: #e0e0e0fb;
+    color: rgb(7, 7, 7);
 }
 .iconePrat{
     height: 30px;

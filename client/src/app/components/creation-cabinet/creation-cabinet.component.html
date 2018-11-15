@@ -1,6 +1,6 @@
 <app-header></app-header>
 <div id="flex-main">
-  <app-menu></app-menu>
+  <!--<app-menu></app-menu>-->
 
   <main id="layout">
 
@@ -46,21 +46,21 @@
             </span>
           </div>
 
-          <div class="row margeT">
+          <div class="row margeT" style="display:none">
             <label class="col-lg-3">Horaire: </label>
 
             <span class="row col-lg-8">
-              <input type="text" name="CodePostal" class="form-control col-lg-6 backorange" placeholder="Lundi"
+              <input type="text" name="horaire_cabinet[0]" class="form-control col-lg-6 backorange" placeholder="Lundi"
                 [(ngModel)]="horaire_cabinet[0]">
-              <input type="text" name="CodePostal" class="form-control col-lg-6 backorange" placeholder="Mardi"
+              <input type="text" name="horaire_cabinet[1]" class="form-control col-lg-6 backorange" placeholder="Mardi"
                 [(ngModel)]="horaire_cabinet[1]">
-              <input type="text" name="CodePostal" class="form-control col-lg-6 backorange" placeholder="Mercredi"
+              <input type="text" name="horaire_cabinet[2]" class="form-control col-lg-6 backorange" placeholder="Mercredi"
                 [(ngModel)]="horaire_cabinet[2]">
-              <input type="text" name="CodePostal" class="form-control col-lg-6 backorange" placeholder="Jeudi"
+              <input type="text" name="horaire_cabinet[3]" class="form-control col-lg-6 backorange" placeholder="Jeudi"
                 [(ngModel)]="horaire_cabinet[3]">
-              <input type="text" name="CodePostal" class="form-control col-lg-6 backorange" placeholder="Vendredi"
+              <input type="text" name="horaire_cabinet[4]" class="form-control col-lg-6 backorange" placeholder="Vendredi"
                 [(ngModel)]="horaire_cabinet[4]">
-              <input type="text" name="CodePostal" class="form-control col-lg-6 backorange" placeholder="Samedi"
+              <input type="text" name="horaire_cabinet[5]" class="form-control col-lg-6 backorange" placeholder="Samedi"
                 [(ngModel)]="horaire_cabinet[5]">
             </span>
           </div>

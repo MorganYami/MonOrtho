@@ -2,12 +2,12 @@
     display: flex;
     flex-direction: row;
     font-family: sans-serif;
-    height: 94vh;
+    height: 93vh;
 }
 
 #flex-main {
     width: 100%;
-    height: 94vh;
+    height: 93vh;
     ;
     display: flex;
     flex-direction: row;
@@ -26,7 +26,7 @@
 #creationPraticien {
     display: flex;
     flex-direction: row;
-    height: 86vh;
+    height: 85vh;
 }
 
 #creationPraticien a {

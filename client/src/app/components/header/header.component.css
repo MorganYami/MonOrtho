@@ -1,14 +1,21 @@
 .mainhead {
-    height: 6vh;
+    height: 7vh;
     width: 100%;
     background-color: black;
+    padding: 5px;
     z-index: 200;
 }
-
-article {
-    width: 40%;
+.navbar{
+    padding: 0%;
 }
-
+article {
+    width: 60%;
+}
+.flexible{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
 .logo {
     height: 6vh;
     width: auto;
@@ -29,4 +36,11 @@ article {
     margin-right: 20px;
 }
 
-
+.nav-item a{
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+}
+.nav-item a:hover{
+    color: #057cc6;
+}

@@ -1,25 +1,21 @@
-
-nav {
+.sidenav{
+    border-right: 1px solid rgb(17, 17, 17);
+    z-index: 10;
     height: 100%;
     background-color: black;
 }
 
-nav ul {
+.sidenav ul {
     height: 80px;
     width: 100%;
     padding: 20px 0px 0px 20px;
     margin: 0;
 }
 
-nav ul a {
+.sidenav ul a {
     font-size: 1.2rem;
     color: white;
     text-decoration: none;
-}
-
-.sidenav{
-    border-right: 1px solid rgb(17, 17, 17);
-    z-index: 10;
 }
 
 .menu{

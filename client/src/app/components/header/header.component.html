@@ -1,21 +1,46 @@
-<div class="mainhead">
-        <section class="d-flex justify-content-between">
-                <article>
-                        <img src="assets/img/logo.png" class="logo" alt="logo orthalis">
-                </article>
-
-                <article class="identification">
-                        <img src="assets/img/identite.jpg" class="identite" alt="logo orthalis">
-                        <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border-radius:0; padding:9px;">
-                                        Administrateur 
+<div class="pos-f-t">
+        <nav class="navbar navbar-dark">
+                <div class="mainhead">
+                        <section class="d-flex justify-content-between">
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
+                                        aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                                        <span class="navbar-toggler-icon"></span>
                                 </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                        <a class="dropdown-item" href="#">Deconnection</a>
-                                </div>
-                        </div>
-                </article>
-        </section>
+                                <article>
+                                        <h3 style="margin: 0%; color: white">
+                                                <img src="assets/img/logoOrthoAdmin.png" class="logo" alt="logo orthalis">
+                                                Mon Orthodentiste - Administration
+                                        </h3>
+                                </article>
 
+                                <article class="identification">
+                                        <img src="assets/img/identite.jpg" class="identite" alt="logo orthalis">
+                                        <div class="dropdown">
+                                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                                        style="border-radius:0; padding:9px;">
+                                                        Administrateur
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item" href="#">Deconnection</a>
+                                                </div>
+                                        </div>
+                                </article>
+                        </section>
+
+                </div>
+        </nav>
+
+        <div class="collapse" id="navbarToggleExternalContent">
+                <div class="bg-dark p-4 flexible">
+                        <span class="text-white nav-item"><a routerLink="/cabinets"> <i class="far fa-hospital text-white"></i>
+                                Cabinets</a></span>
+                        <span class="text-white nav-item"><a routerLink="/creation-cabinet"> <i class="fas fa-edit text-white"></i>
+                                Création Cabinet</a></span>
+                        <span class="text-white nav-item"><a routerLink="/praticiens"> <i class="fas fa-user-md text-white"></i>
+                                Praticiens</a></span>
+                        <span class="text-white nav-item"><a routerLink="/creation-praticien"> <i class="fas fa-edit text-white"></i>
+                                Création Praticien</a></span>
+                </div>
+        </div>
 </div>

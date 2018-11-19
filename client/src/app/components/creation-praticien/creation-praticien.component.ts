@@ -25,19 +25,19 @@ export class CreationPraticienComponent implements OnInit {
   ngOnInit() {
   }
 
-  //ajout ou modification de la  photo
+  //add or change the photo
   onSelectPhotoPraticien(event) { 
     if (event.target.files && event.target.files[0]) {
       this.photo = this.pathImgPraticiens + event.target.files[0].name;
     }
   }
 
-  //envoi des données au service
+  //send datas to the service
   creerPraticien(data) {
     if (this.photo == "/src/assets/img/personnaImg.png"){
       this.photo = "";
     }
-    //enregistrer dans la base de données
+    //select datas to send
     this._creerPraticien.creerPraticien(data = [
       this.nom, 
       this.prenom, 

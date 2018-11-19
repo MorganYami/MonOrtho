@@ -41,7 +41,7 @@ export class CreationCabinetComponent implements OnInit {
 
   ngOnInit() {
     this.getPraticien();
-    //récupèration des codes existant pour comparaison
+    //get existing codes for checking
     this._getCodeCabinet.CodeCabinet()
       .subscribe(
         res => this.liste_mdp = res,
@@ -50,7 +50,7 @@ export class CreationCabinetComponent implements OnInit {
       
   }
   
-  //récupération de la liste des praticiens
+  //get existing praticiens
   getPraticien() {
     this._getPraticiens.Praticiens()
       .subscribe(
@@ -59,14 +59,14 @@ export class CreationCabinetComponent implements OnInit {
       );
   }
 
-  //ajout d'un logo
+  //adding logo
   onSelectLogo(event) {
     if (event.target.files && event.target.files[0]) {
       this.logo = this.pathImgLogo + event.target.files[0].name;
     }
   }
 
-  //ajout d'une photo pour le slider
+  //adding photo(s)
   onAddPhoto(event) {
     if (event.target.files && event.target.files[0]) {
       // this.photo_slider.push(this.pathImgCabinets + event.target.files[0].name);
@@ -74,7 +74,7 @@ export class CreationCabinetComponent implements OnInit {
     }
   }
 
-  // generation d'un code unique
+  // generating unique code
   onGenererCode() {   
     let mdp = "";
     let lengthListe = this.liste_mdp.length;
@@ -107,23 +107,23 @@ export class CreationCabinetComponent implements OnInit {
     } while (verif === false);
   }
 
-  //ajout d'un praticien dans la liste
+  //adding praticien(s) to the list
   ajouterPraticien(datas) {
     var l = this.liste_praticiens[0].id_praticien;
     let data2 = datas -l;
     this.praticiens_linked.push(this.liste_praticiens[data2]);
   }
-  //vider la liste de praticien
+  //voidding the list
   voidPraticiens() {
     this.praticiens_linked = [];
   }
 
-  //envoi des données au service
+  //sendding datas to the service
   creerCabinet(data) {
     if (this.logo == "/src/assets/img/logoImg.png") {
       this.logo = "";
     }
-    //enregistrer dans la base de données
+    //selecting datas to send
     this._creerCabinet.creerCabinet(data = [
       this.nom_cabinet,
       this.code_cabinet,
